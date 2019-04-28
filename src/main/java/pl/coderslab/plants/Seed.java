@@ -3,6 +3,7 @@ package pl.coderslab.plants;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Data
@@ -10,11 +11,13 @@ public class Seed {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long Id;
+    @NotBlank
     @Column(unique = true)
-    private String seedName;
-    private int seedGrowTime;
-    private int seedPlantTime;
+    private String name;
+    private int growTime;
+    private int plantTime;
+    private String comment;
 
 
 }

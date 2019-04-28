@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-łóść
+<%@include file="/WEB-INF/views/header.jspf" %>
+łóśćÓŹŁ
 </body>
 </html>
