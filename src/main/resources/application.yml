@@ -1,4 +1,6 @@
-Spring:
+
+
+spring:
   datasource:
     url: jdbc:mysql://localhost:3306/nasiona?useSSL=false
     username: clroot
@@ -6,9 +8,14 @@ Spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     generate-ddl: true
     show-sql: true
   mvc:
     view:
-      suffix: .html
+      suffix: .jsp
+      prefix: /WEB-INF/views/
+    locale: pl_PL
+
+server:
+  port: 8080
