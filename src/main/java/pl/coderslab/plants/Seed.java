@@ -11,7 +11,7 @@ public class Seed {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private Long id;
     @NotBlank
     @Column(unique = true)
     private String name;

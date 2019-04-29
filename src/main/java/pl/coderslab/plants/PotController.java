@@ -7,6 +7,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 
 import javax.validation.Valid;
@@ -14,6 +15,7 @@ import java.util.List;
 
 
 @Controller
+@RequestMapping("/pot")
 public class PotController {
 
     @Autowired
@@ -21,26 +23,26 @@ public class PotController {
     @Autowired
     private SeedRepository seedRepository;
 
-    @GetMapping("/pot/list")
+    @GetMapping("/list")
     public String potList(Model model) {
         List<Pot> pots = potRepository.findAll();
         model.addAttribute("pots", pots);
         return "potList";
     }
 
-    @GetMapping("/pot/add")
+    @GetMapping("/add")
     public String potAdd(Model model) {
         model.addAttribute("pot", new Pot());
         return "potNew";
     }
 
-    @PostMapping("/pot/add")
+    @PostMapping("/add")
     public String potAddPost(@ModelAttribute("form")  @Valid Pot pot, BindingResult result) {
         if (result.hasErrors()) {
             return "potNew";
         }
         this.potRepository.save(pot);
-        return "potList";
+        return "redirect:list";
     }
 
 

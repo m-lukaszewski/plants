@@ -15,11 +15,10 @@ public class Pot {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
-    @NotBlank
+    private Long id;
     private String name;
     @ManyToOne
-    @JoinColumn(name="seed_id")
+    @JoinColumn(name = "seed_id")
     private Seed seed;
     @UpdateTimestamp
     private LocalDate created;
