@@ -10,26 +10,30 @@
 <html>
 <head>
     <title>Dodawanie doniczek</title>
+    <%@include file="/WEB-INF/views/styles.jspf" %>
 </head>
 <body>
-<%@include file="/WEB-INF/views/header.jspf" %>
+<div class="container">
 
-<div>
-    <form:form method="post" modelAttribute="pot">
-        <div> Nazwa
-            <form:input path="name"/>
-            <form:errors path="name"/>
-        </div>
-        <div> Nasiona
-            <form:select path="seed.id" items="${seeds}" itemLabel="name" itemValue="id"/>
-            <form:errors path="seed.id"/>
-        </div>
-        <div> uwagi
-            <form:input path="comment"/>
-            <form:errors path="comment"/>
-        </div>
-        <input type="submit" value="dodaj">
-    </form:form>
+    <%@include file="/WEB-INF/views/header.jspf" %>
+
+    <div>
+        <form:form method="post" modelAttribute="pot">
+            <div> Nazwa
+                <form:input path="name"/>
+                <form:errors path="name"/>
+            </div>
+            <div> Nasiona
+                <form:select path="seed.id" items="${seeds}" itemLabel="name" itemValue="id"/>
+                <form:errors path="seed.id"/>
+            </div>
+            <div> uwagi
+                <form:input path="comment"/>
+                <form:errors path="comment"/>
+            </div>
+            <input type="submit" value="dodaj">
+        </form:form>
+    </div>
 </div>
 </body>
 </html>

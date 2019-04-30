@@ -10,31 +10,35 @@
 <html>
 <head>
     <title>Dodawanie doniczek</title>
+    <%@include file="/WEB-INF/views/styles.jspf" %>
 </head>
 <body>
-<%@include file="/WEB-INF/views/header.jspf" %>
+<div class="container">
 
-<div>
-    <form:form method="post" modelAttribute="seed">
-        <div> Nazwa
-            <form:input path="name"/>
-            <form:errors path="name"/>
-        </div>
-        <div> Dni kiełkowania
-            <form:input path="growTime"/>
-            <form:errors path="growTime"/>
-        </div>
-        <div> Dni do rozsady
-            <form:input path="plantTime"/>
-            <form:errors path="plantTime"/>
-        </div>
-        <div> Uwagi
-            <form:input path="comment"/>
-            <form:errors path="comment"/>
-        </div>
+    <%@include file="/WEB-INF/views/header.jspf" %>
 
-        <input type="submit" value="dodaj">
-    </form:form>
+    <div>
+        <form:form method="post" modelAttribute="seed">
+            <div> Nazwa
+                <form:input path="name"/>
+                <form:errors path="name"/>
+            </div>
+            <div> Dni kiełkowania
+                <form:input path="growDays"/>
+                <form:errors path="growDays"/>
+            </div>
+            <div> Dni do rozsady
+                <form:input path="plantDays"/>
+                <form:errors path="plantDays"/>
+            </div>
+            <div> Uwagi
+                <form:input path="comment"/>
+                <form:errors path="comment"/>
+            </div>
+
+            <input type="submit" value="dodaj">
+        </form:form>
+    </div>
 </div>
 </body>
 </html>

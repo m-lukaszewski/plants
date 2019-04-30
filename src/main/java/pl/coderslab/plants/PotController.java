@@ -37,21 +37,24 @@ public class PotController {
     }
 
     @PostMapping("/add")
-    public String potAddPost(@ModelAttribute("pot")  @Valid Pot pot, BindingResult result) {
+    public String potAddPost(@ModelAttribute("pot") @Valid Pot pot, BindingResult result) {
         if (result.hasErrors()) {
             return "potNew";
         }
         this.potRepository.save(pot);
-        pot.setUniqueName();
+        if (pot.getName().isEmpty() == true) {
+            pot.setUniqueName();
+        }
 
         Seed seed = seedRepository.getById(pot.getSeed().getId());
-        pot.setGerminate(pot.getCreated().plusDays(seed.getGrowTime()));
+        pot.setGerminate(pot.getCreated().plusDays(seed.getGrowDays()));
+        pot.setPlantToGroundDate(pot.getCreated().plusDays(seed.getPlantDays()));
         this.potRepository.save(pot);
         return "redirect:list";
     }
 
     @ModelAttribute("seeds")
-    public List<Seed> seeds(){
+    public List<Seed> seeds() {
         return this.seedRepository.findAll();
     }
 

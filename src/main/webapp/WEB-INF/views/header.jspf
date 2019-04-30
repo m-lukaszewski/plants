@@ -1,5 +1,4 @@
-<div>
+<div class="nav">
     <a class="nav-link" href="/seed/list">Nasiona</a>
     <a class="nav-link" href="/pot/list">Doniczki</a>
-    <a class="nav-link" href="/tray/list">Tacki</a>
 </div>

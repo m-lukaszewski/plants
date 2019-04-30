@@ -16,9 +16,9 @@ public class Seed {
     @NotBlank
     @Column(unique = true)
     private String name;
-    @Min(10)
-    private int growTime;
-    private int plantTime;
+    @Min(5)
+    private int growDays;
+    private int plantDays;
     private String comment;
 
 

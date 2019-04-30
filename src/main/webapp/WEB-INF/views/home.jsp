@@ -9,9 +9,13 @@
 <html>
 <head>
     <title>Title</title>
+    <%@include file="/WEB-INF/views/styles.jspf" %>
 </head>
 <body>
-<%@include file="/WEB-INF/views/header.jspf" %>
-łóśćÓŹŁ
+<div class="container">
+
+    <%@include file="/WEB-INF/views/header.jspf" %>
+    łóśćÓŹŁ
+</div>
 </body>
 </html>

@@ -10,34 +10,40 @@
 <html>
 <head>
     <title>Lista nasion</title>
+    <%@include file="/WEB-INF/views/styles.jspf" %>
 </head>
 <body>
-<%@include file="/WEB-INF/views/header.jspf" %>
+<div class="container">
 
-<table border="1">
-    <tr>
-        <th>id</th>
-        <th>nazwa</th>
-        <th>czas kiełkowania</th>
-        <th>czas rozsadzania</th>
-        <th>uwagi</th>
+    <%@include file="/WEB-INF/views/header.jspf" %>
 
-    </tr>
-    <c:forEach items="${seeds}" var="seed">
-
+    <table border="1">
         <tr>
-
-            <td>${seed.id}</td>
-            <td>${seed.name}</td>
-            <td>${seed.growTime}</td>
-            <td>${seed.plantTime}</td>
-            <td>${seed.comment}</td>
-
+            <th>id</th>
+            <th>nazwa</th>
+            <th>czas kiełkowania</th>
+            <th>czas rozsadzania</th>
+            <th>uwagi</th>
 
         </tr>
+        <c:forEach items="${seeds}" var="seed">
 
-    </c:forEach>
-</table>
-<a href="/seed/add">Dodaj</a>
+            <tr>
+
+                <td>${seed.id}</td>
+                <td>${seed.name}</td>
+                <td>${seed.growDays}</td>
+                <td>${seed.plantDays}</td>
+                <td>${seed.comment}</td>
+
+
+            </tr>
+
+        </c:forEach>
+    </table>
+    <div class="nav">
+        <a href="/seed/add" class="nav">Dodaj</a>
+    </div>
+</div>
 </body>
 </html>

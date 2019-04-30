@@ -10,37 +10,42 @@
 <html>
 <head>
     <title>Lista doniczek</title>
+    <%@include file="/WEB-INF/views/styles.jspf" %>
 </head>
 <body>
-<%@include file="/WEB-INF/views/header.jspf" %>
+<div class="container">
+    <%@include file="/WEB-INF/views/header.jspf" %>
 
-<table border="1">
-    <tr>
-        <th>id</th>
-        <th>nazwa</th>
-        <th>ziarno</th>
-        <th>zasiane</th>
-        <th>kiełkowanie</th>
-        <th>rozsada</th>
-        <th>uwagi</th>
-
-    </tr>
-    <c:forEach items="${pots}" var="pot">
-
+    <table border="1">
         <tr>
-
-            <td>${pot.id}</td>
-            <td>${pot.name}</td>
-            <td>${pot.seed.name}</td>
-            <td>${pot.created}</td>
-            <td>${pot.germinate}</td>
-            <td>${pot.plantToGroundDate}</td>
-            <td>${pot.comment}</td>
+            <th>id</th>
+            <th>doniczka</th>
+            <th>ziarno</th>
+            <th>zasiane</th>
+            <th>kiełkowanie</th>
+            <th>rozsada</th>
+            <th>uwagi</th>
 
         </tr>
+        <c:forEach items="${pots}" var="pot">
 
-    </c:forEach>
-</table>
-<a href="/pot/add">Dodaj</a>
+            <tr>
+
+                <td>${pot.id}</td>
+                <td>${pot.name}</td>
+                <td>${pot.seed.name}</td>
+                <td>${pot.created}</td>
+                <td>${pot.germinate}</td>
+                <td>${pot.plantToGroundDate}</td>
+                <td>${pot.comment}</td>
+
+            </tr>
+
+        </c:forEach>
+    </table>
+    <div class="nav">
+        <a href="/pot/add">Dodaj</a>
+    </div>
+</div>
 </body>
 </html>
