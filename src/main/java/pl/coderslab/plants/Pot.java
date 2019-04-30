@@ -26,4 +26,12 @@ public class Pot {
     private LocalDate plantToGroundDate;
     private String comment;
 
+    public void setUniqueName() {
+        this.name = "D-" + this.id.toString();
+
+    }
+
+    public void setGerminate(Seed seed) {
+        this.germinate = this.created.plusDays(seed.getGrowTime());
+    }
 }

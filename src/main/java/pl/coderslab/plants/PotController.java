@@ -37,10 +37,15 @@ public class PotController {
     }
 
     @PostMapping("/add")
-    public String potAddPost(@ModelAttribute("form")  @Valid Pot pot, BindingResult result) {
+    public String potAddPost(@ModelAttribute("pot")  @Valid Pot pot, BindingResult result) {
         if (result.hasErrors()) {
             return "potNew";
         }
+        this.potRepository.save(pot);
+        pot.setUniqueName();
+
+        Seed seed = pot.getSeed();
+        pot.setGerminate(seed);
         this.potRepository.save(pot);
         return "redirect:list";
     }

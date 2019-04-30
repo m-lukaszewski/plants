@@ -12,11 +12,16 @@ spring:
       ddl-auto: update
     generate-ddl: true
     show-sql: true
+
   mvc:
     view:
       suffix: .jsp
       prefix: /WEB-INF/views/
     locale: pl_PL
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
 
 server:
   port: 8080

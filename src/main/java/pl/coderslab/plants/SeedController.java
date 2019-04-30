@@ -35,7 +35,7 @@ public class SeedController {
     }
 
     @PostMapping("/add")
-    public String seedAddPost(@ModelAttribute("form")  @Valid Seed seed, BindingResult result) {
+    public String seedAddPost(@ModelAttribute("seed") @Valid Seed seed, BindingResult result) {
         if (result.hasErrors()) {
             return "seedNew";
         }
