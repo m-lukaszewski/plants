@@ -44,16 +44,15 @@ public class PotController {
         this.potRepository.save(pot);
         pot.setUniqueName();
 
-        Seed seed = pot.getSeed();
-        pot.setGerminate(seed);
+        Seed seed = seedRepository.getById(pot.getSeed().getId());
+        pot.setGerminate(pot.getCreated().plusDays(seed.getGrowTime()));
         this.potRepository.save(pot);
         return "redirect:list";
     }
-
-
 
     @ModelAttribute("seeds")
     public List<Seed> seeds(){
         return this.seedRepository.findAll();
     }
+
 }

@@ -30,8 +30,4 @@ public class Pot {
         this.name = "D-" + this.id.toString();
 
     }
-
-    public void setGerminate(Seed seed) {
-        this.germinate = this.created.plusDays(seed.getGrowTime());
-    }
 }
