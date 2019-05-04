@@ -24,6 +24,7 @@
             <th>czas kiełkowania</th>
             <th>czas rozsadzania</th>
             <th>uwagi</th>
+            <th>akcja</th>
 
         </tr>
         <c:forEach items="${seeds}" var="seed">
@@ -35,6 +36,11 @@
                 <td>${seed.growDays}</td>
                 <td>${seed.plantDays}</td>
                 <td>${seed.comment}</td>
+                <td>
+                    <a href="/seed/edit/${seed.id}">Zmień</a>
+                    <a href="/seed/del/${seed.id}">Usuń</a>
+                </td>
+
 
 
             </tr>

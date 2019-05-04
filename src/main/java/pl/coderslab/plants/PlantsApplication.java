@@ -15,6 +15,8 @@ public class PlantsApplication implements WebMvcConfigurer {
     @Bean
     public Validator validator() {
         return new LocalValidatorFactoryBean();
+
+
     }
     public static void main(String[] args) {
         SpringApplication.run(PlantsApplication.class, args);
