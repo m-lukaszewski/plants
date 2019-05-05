@@ -6,10 +6,13 @@ spring:
     username: clroot
     password: coderslab
     sql-script-encoding: utf-8
+    hikari:
+      data-source-properties.useUnicode: true
+      data-source-properties.characterEncoding: UTF-8
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     generate-ddl: true
     show-sql: true
 
@@ -25,3 +28,4 @@ spring:
 
 server:
   port: 8080
+

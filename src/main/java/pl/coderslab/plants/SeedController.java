@@ -44,20 +44,20 @@ public class SeedController {
     @GetMapping("/del/{id}")
     public String delete(@PathVariable Long id) {
         seedRepository.deleteById(id);
-        return "redirect:../potList";
+        return "redirect:../list";
     }
 
     @GetMapping("/edit/{id}")
     public String editGet(@PathVariable Long id, Model model) {
         Optional<Seed> seed = seedRepository.findById(id);
         model.addAttribute("seed", seed);
-        return "seedAdd";
+        return "seedNew";
     }
 
     @PostMapping("/edit/{id}")
     public String editPost(@ModelAttribute Seed seed, BindingResult result) {
         seedRepository.save(seed);
-        return "redirect:../potList";
+        return "redirect:../list";
     }
 
 

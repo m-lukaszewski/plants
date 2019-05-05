@@ -47,11 +47,16 @@ public class PotController {
         Seed seed = seedRepository.getById(pot.getSeed().getId());
         pot.setGerminate(pot.getCreated().plusDays(seed.getGrowDays()));
         pot.setPlantToGroundDate(pot.getCreated().plusDays(seed.getPlantDays()));
-        this.potRepository.save(pot);
+        potRepository.save(pot);
         return "redirect:list";
     }
 
+    @GetMapping("/del/{id}")
+    public String delete(@PathVariable Long id) {
+        potRepository.deleteById(id);
+        return "redirect:../list";
 
+    }
 
     @ModelAttribute("seeds")
     public List<Seed> seeds() {
@@ -59,3 +64,4 @@ public class PotController {
     }
 
 }
+

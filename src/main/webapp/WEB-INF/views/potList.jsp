@@ -25,6 +25,7 @@
             <th>kiełkowanie</th>
             <th>rozsada</th>
             <th>uwagi</th>
+            <th>akcja</th>
 
         </tr>
         <c:forEach items="${pots}" var="pot">
@@ -38,6 +39,9 @@
                 <td>${pot.germinate}</td>
                 <td>${pot.plantToGroundDate}</td>
                 <td>${pot.comment}</td>
+                <td>
+                    <a href="/pot/del/${pot.id}">Usuń</a>
+                </td>
 
             </tr>
 

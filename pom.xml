@@ -16,7 +16,7 @@
 
 
     <name>plants</name>
-    <description>end project for Coderslab JEE 16 course.</description>
+    <description>Final project for Coderslab JEE 16 course.</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
