@@ -13,20 +13,24 @@
     <%@include file="/WEB-INF/views/styles.jspf" %>
 </head>
 <body>
-<div class="container">
 
-    <%@include file="/WEB-INF/views/header.jspf" %>
+<%@include file="/WEB-INF/views/menu.jspf" %>
 
-    <table border="1">
-        <tr>
+<div class="w3-main" style="margin-left:400px;margin-top:50px;margin-right: 80px;">
+
+
+    <table class="w3-table-all w3-hoverable" border="1" style="width: 600px;" border="1">
+        <thead>
+        <tr class="w3-green">
             <th>id</th>
             <th>nazwa</th>
-            <th>czas kiełkowania</th>
-            <th>czas rozsadzania</th>
-            <th>uwagi</th>
+            <th>dni kiełkowania</th>
+            <th>dni do rozsady</th>
+            <th style="width: 200px;">uwagi</th>
             <th>akcja</th>
 
         </tr>
+        </thead>
         <c:forEach items="${seeds}" var="seed">
 
             <tr>
@@ -40,7 +44,6 @@
                     <a href="/seed/edit/${seed.id}">Zmień</a>
                     <a href="/seed/del/${seed.id}">Usuń</a>
                 </td>
-
 
 
             </tr>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: uze
@@ -14,8 +15,9 @@
 <body>
 <div class="container">
 
-    <%@include file="/WEB-INF/views/header.jspf" %>
-    łóśćÓŹŁ
+    <%@include file="/WEB-INF/views/menu.jspf" %>
+
+
 </div>
 </body>
 </html>

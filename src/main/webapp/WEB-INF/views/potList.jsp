@@ -13,21 +13,25 @@
     <%@include file="/WEB-INF/views/styles.jspf" %>
 </head>
 <body>
-<div class="container">
-    <%@include file="/WEB-INF/views/header.jspf" %>
 
-    <table border="1">
-        <tr>
+<%@include file="/WEB-INF/views/menu.jspf" %>
+
+<div class="w3-main" style="margin-left:400px;margin-top:50px;margin-right: 80px;">
+
+    <table class="w3-table-all w3-hoverable" border="1" style="width: 600px;">
+        <thead>
+        <tr class="w3-green">
             <th>id</th>
             <th>doniczka</th>
             <th>ziarno</th>
             <th>zasiane</th>
             <th>kiełkowanie</th>
             <th>rozsada</th>
-            <th>uwagi</th>
+            <th style="width: 200px;">uwagi</th>
             <th>akcja</th>
 
         </tr>
+        </thead>
         <c:forEach items="${pots}" var="pot">
 
             <tr>
@@ -50,6 +54,8 @@
     <div class="nav">
         <a href="/pot/add">Dodaj</a>
     </div>
+
 </div>
+
 </body>
 </html>

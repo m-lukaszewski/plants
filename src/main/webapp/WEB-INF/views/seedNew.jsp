@@ -1,4 +1,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: uze
@@ -13,9 +15,10 @@
     <%@include file="/WEB-INF/views/styles.jspf" %>
 </head>
 <body>
-<div class="container">
 
-    <%@include file="/WEB-INF/views/header.jspf" %>
+<%@include file="/WEB-INF/views/menu.jspf" %>
+
+<div class="w3-main" style="margin-left:400px;margin-top:20px;margin-right: 80px;">
 
     <div>
         <form:form method="post" modelAttribute="seed">
