@@ -18,30 +18,31 @@
 
 <%@include file="/WEB-INF/views/menu.jspf" %>
 
-<div class="w3-main" style="margin-left:400px;margin-top:20px;margin-right: 80px;">
+<div class="w3-main" style="margin-left:300px;margin-top:20px;margin-right: 80px;">
 
-    <div>
-        <form:form method="post" modelAttribute="seed">
-            <div> Nazwa
-                <form:input path="name"/>
-                <form:errors path="name"/>
-            </div>
-            <div> Dni kiełkowania
-                <form:input path="growDays"/>
-                <form:errors path="growDays"/>
-            </div>
-            <div> Dni do rozsady
-                <form:input path="plantDays"/>
-                <form:errors path="plantDays"/>
-            </div>
-            <div> Uwagi
-                <form:input path="comment"/>
-                <form:errors path="comment"/>
-            </div>
 
-            <input type="submit" value="dodaj">
-        </form:form>
-    </div>
+    <h2 class="w3-green">Dodawanie nasion</h2>
+    <form:form method="post" modelAttribute="seed">
+        <div> Nazwa
+            <form:input path="name" class="w3-input"/>
+            <form:errors path="name"/>
+        </div>
+        <div> Dni kiełkowania
+            <form:input path="growDays" class="w3-input"/>
+            <form:errors path="growDays"/>
+        </div>
+        <div> Dni do rozsady
+            <form:input path="plantDays" class="w3-input"/>
+            <form:errors path="plantDays"/>
+        </div>
+        <div> Uwagi
+            <form:input path="comment" class="w3-input"/>
+            <form:errors path="comment"/>
+        </div>
+
+        <input type="submit" value="dodaj">
+    </form:form>
+</div>
 </div>
 </body>
 </html>

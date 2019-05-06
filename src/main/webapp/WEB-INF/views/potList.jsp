@@ -16,7 +16,7 @@
 
 <%@include file="/WEB-INF/views/menu.jspf" %>
 
-<div class="w3-main" style="margin-left:400px;margin-top:50px;margin-right: 80px;">
+<div class="w3-main" style="margin-left:300px;margin-top:50px;margin-right: 80px;">
 
     <table class="w3-table-all w3-hoverable" border="1" style="width: 600px;">
         <thead>
