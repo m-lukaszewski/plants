@@ -7,6 +7,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+<!-- jsCalendar -->
+<link rel="stylesheet" type="text/css" href="/css/jsCalendar.css">
 <style>
     html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 </style>
+
+<script src="../../js/jsCalendar.js"></script>
+<link rel="stylesheet" href="/css/main.css">

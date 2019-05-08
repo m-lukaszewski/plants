@@ -1,6 +1,8 @@
 package pl.coderslab.plants;
 
 import lombok.Data;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
@@ -18,6 +20,8 @@ public class Pot {
     private Long id;
     private String name;
     @ManyToOne
+    @NotNull
+    @NotFound(action = NotFoundAction.IGNORE)
     @JoinColumn(name = "seed_id")
     private Seed seed;
     @UpdateTimestamp

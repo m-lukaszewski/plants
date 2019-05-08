@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 import javax.validation.Valid;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,7 +25,9 @@ public class PotController {
     @GetMapping("/list")
     public String potList(Model model) {
         List<Pot> pots = potRepository.findAll();
+        System.out.println("---------------"+pots.toString());
         model.addAttribute("pots", pots);
+        model.addAttribute("currentDate", LocalDate.now());
         return "potList";
     }
 

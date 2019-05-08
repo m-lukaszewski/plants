@@ -1,3 +1,9 @@
-body {
-    background-color: gray;
+.error {
+    color: red;
+    background: darkred;
+    font-weight: bolder;
 }
+
+/*body {*/
+/*    background: #83D8FF;*/
+/*}*/

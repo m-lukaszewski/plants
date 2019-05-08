@@ -1,16 +1,20 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:150px;" id="mySidebar"><br>
-    <div class="w3-container w3-row">
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px; margin-left: 50px; margin-bottom: 50px;" id="mySidebar"><br>
+    <div>
 
 
         <div class="w3-col s4">
 
-            <img src="../../plantsmanager-sm.webp" class="w3-circle w3-margin-right"><br>
+            <a href="/"> <img src="../../plantsmanager-sm.webp"><br></a>
         </div>
-
     </div>
-
-    <div class="w3-container"><strong style="text-align: right">Plants Manager</strong>
+    <div style="text-align: center;">
+        <br>
+        <strong>Plants Manager</strong><br>
+        by Marcin Łukaszewski
+    </div>
+    <div class="w3-container">
 
         <hr>
         <h5><strong>Menu:</strong></h5>
@@ -23,10 +27,14 @@
         <a href="/pot/list" class="w3-bar-item w3-button w3-padding"><i class="fas fa-spa"></i> Sadzonki</a>
         <a href="<c:url value="/logout" />" class="w3-bar-item w3-button w3-padding"><i
                 class="fas fa-user-alt-slash"></i> Logout</a>
+        <hr>
+<%--        <button id="rozsady">Rozsady</button>--%>
 
+        <div id="plants-calendar" class="auto-jsCalendar material-theme green" data-month-format="month YYYY">
+    </div>
+<%--    <button id="my-button-c">Clear</button>--%>
     </div>
 </nav>
-
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
