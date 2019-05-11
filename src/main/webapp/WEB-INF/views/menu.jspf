@@ -12,7 +12,9 @@
     <div style="text-align: center;">
         <br>
         <strong>Plants Manager</strong><br>
-        by Marcin Łukaszewski
+<%--        by Marcin Łukaszewski--%>
+        wersja 0.1
+
     </div>
     <div class="w3-container">
 

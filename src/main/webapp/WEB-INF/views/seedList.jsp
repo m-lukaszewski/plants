@@ -32,8 +32,8 @@
         <tr class="w3-green">
             <th>id</th>
             <th>nazwa</th>
-            <th>dni kiełkowania</th>
-            <th>dni do rozsady</th>
+            <th>kiełkowanie</th>
+            <th>rozsada</th>
             <th style="width: 200px;">uwagi</th>
             <th>akcja</th>
 
@@ -45,12 +45,12 @@
 
                 <td>${seed.id}</td>
                 <td>${seed.name}</td>
-                <td>${seed.growDays}</td>
-                <td>${seed.plantDays}</td>
+                <td>${seed.growDays} dni</td>
+                <td>${seed.plantDays} dni</td>
                 <td style="width: 200px">${seed.comment}</td>
-                <td style="width: auto">
-                    <a href="/seed/edit/${seed.id}"><button style='font-size:10px'>Zmień<i class='fas fa-edit'></i></button></a>
-                    <a href="#" onclick="confirmDelete(${seed.id}, '${seed.name}')" ><button style='font-size:10px'>Usuń<i class='fas fa-eraser'></i></button></a>
+                <td>
+                    <a href="/seed/edit/${seed.id}"><button style='font-size:10px; width: 60px;'>Zmień<i class='fas fa-edit'></i></button></a><br>
+                    <a href="#" onclick="confirmDelete(${seed.id}, '${seed.name}')" ><button style='font-size:10px; width: 60px;'>Usuń<i class='fas fa-eraser'></i></button></a>
                 </td>
 
 
@@ -59,7 +59,7 @@
         </c:forEach>
     </table>
     <div class="nav">
-        <a href="/seed/add" class="nav">Dodaj</a>
+        <a href="/seed/add" class="nav"><button style='font-size:10px; width: 60px; '>Dodaj<i class='far fa-edit'></i></button></a>
     </div>
 
 </div>

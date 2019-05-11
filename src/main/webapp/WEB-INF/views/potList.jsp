@@ -77,7 +77,7 @@
         </c:forEach>
     </table>
     <div class="nav">
-        <a href="/pot/add">Dodaj</a>
+        <a href="/pot/add"><button style='font-size:10px; width: 60px;'>Dodaj<i class='far fa-edit'></i></button></a>
     </div>
 
 </div>
