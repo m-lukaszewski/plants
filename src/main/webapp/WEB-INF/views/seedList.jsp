@@ -21,47 +21,61 @@
 
 </head>
 <body>
+<div class="wrapper">
+    <div class="middle">
 
-<%@include file="/WEB-INF/views/menu.jspf" %>
+        <div class="container">
+            <main class="content">
+                <table class="w3-table-all w3-hoverable" border="1" style="width: 600px;" border="1">
+                    <thead>
+                    <tr class="w3-green">
+                        <th>id</th>
+                        <th>nazwa</th>
+                        <th>kiełkowanie</th>
+                        <th>rozsada</th>
+                        <th style="width: 200px;">uwagi</th>
+                        <th>akcja</th>
 
-<div class="w3-main" style="margin-left:400px;margin-top:50px;margin-right: 80px;">
+                    </tr>
+                    </thead>
+                    <c:forEach items="${seeds}" var="seed">
+
+                        <tr>
+
+                            <td>${seed.id}</td>
+                            <td>${seed.name}</td>
+                            <td>${seed.growDays} dni</td>
+                            <td>${seed.plantDays} dni</td>
+                            <td style="width: 200px">${seed.comment}</td>
+                            <td>
+                                <a href="/seed/edit/${seed.id}">
+                                    <button style='font-size:10px; width: 60px;'>Zmień <i class='fas fa-edit'></i>
+                                    </button>
+                                </a><br>
+                                <a href="#" onclick="confirmDelete(${seed.id}, '${seed.name}')">
+                                    <button style='font-size:10px; width: 60px;'>Usuń <i class='fas fa-eraser'></i>
+                                    </button>
+                                </a>
+                            </td>
 
 
-    <table class="w3-table-all w3-hoverable" border="1" style="width: 600px;" border="1">
-        <thead>
-        <tr class="w3-green">
-            <th>id</th>
-            <th>nazwa</th>
-            <th>kiełkowanie</th>
-            <th>rozsada</th>
-            <th style="width: 200px;">uwagi</th>
-            <th>akcja</th>
+                        </tr>
 
-        </tr>
-        </thead>
-        <c:forEach items="${seeds}" var="seed">
+                    </c:forEach>
+                </table>
+                <div class="nav">
+                    <a href="/seed/add" class="nav">
+                        <button style='font-size:10px; width: 60px; '>Dodaj <i class='far fa-edit'></i></button>
+                    </a>
+                </div>
+            </main>
+        </div>
 
-            <tr>
+        <%@include file="/WEB-INF/views/menu.jspf" %>
 
-                <td>${seed.id}</td>
-                <td>${seed.name}</td>
-                <td>${seed.growDays} dni</td>
-                <td>${seed.plantDays} dni</td>
-                <td style="width: 200px">${seed.comment}</td>
-                <td>
-                    <a href="/seed/edit/${seed.id}"><button style='font-size:10px; width: 60px;'>Zmień<i class='fas fa-edit'></i></button></a><br>
-                    <a href="#" onclick="confirmDelete(${seed.id}, '${seed.name}')" ><button style='font-size:10px; width: 60px;'>Usuń<i class='fas fa-eraser'></i></button></a>
-                </td>
-
-
-            </tr>
-
-        </c:forEach>
-    </table>
-    <div class="nav">
-        <a href="/seed/add" class="nav"><button style='font-size:10px; width: 60px; '>Dodaj<i class='far fa-edit'></i></button></a>
     </div>
-
 </div>
+
+
 </body>
 </html>

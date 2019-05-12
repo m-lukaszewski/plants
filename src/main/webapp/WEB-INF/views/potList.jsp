@@ -25,61 +25,70 @@
 </head>
 <body>
 
-<%@include file="/WEB-INF/views/menu.jspf" %>
+<div class="wrapper">
+    <div class="middle">
 
-<div class="w3-main" style="margin-left:400px;margin-top:50px;margin-right: 80px;">
+        <div class="container">
+            <main class="content">
+                <table class="w3-table-all w3-hoverable" border="1" style="width: 800px;">
+                    <thead>
+                    <tr class="w3-green">
+                        <th>id</th>
+                        <th>doniczka</th>
+                        <th>ziarno</th>
+                        <th>zasiane</th>
+                        <th>kiełkowanie</th>
+                        <th>rozsada</th>
+                        <th style="width: 200px;">uwagi</th>
+                        <th>akcja</th>
 
-    <table class="w3-table-all w3-hoverable" border="1" style="width: 600px;">
-        <thead>
-        <tr class="w3-green">
-            <th>id</th>
-            <th>doniczka</th>
-            <th>ziarno</th>
-            <th>zasiane</th>
-            <th>kiełkowanie</th>
-            <th>rozsada</th>
-            <th style="width: 200px;">uwagi</th>
-            <th>akcja</th>
+                    </tr>
+                    </thead>
+                    <c:forEach items="${pots}" var="pot">
 
-        </tr>
-        </thead>
-        <c:forEach items="${pots}" var="pot">
+                        <tr>
 
-            <tr>
-
-                <td>${pot.id}</td>
-                <td>${pot.name}</td>
-                <td>${pot.seed.name}</td>
-                <td>${pot.created}</td>
-                <td><c:choose>
-                    <c:when test="${pot.germinate <= currentDate}">
-                        <span style="color: green;">${pot.germinate}</span>
-                    </c:when>
-                    <c:otherwise>${pot.germinate}</c:otherwise>
-                </c:choose>
-               </td>
-                <td>
-                    <c:choose>
-                    <c:when test="${pot.plantToGroundDate <= currentDate}">
-                    <span style="color:red;">${pot.plantToGroundDate}
+                            <td>${pot.id}</td>
+                            <td>${pot.name}</td>
+                            <td>${pot.seed.name}</td>
+                            <td>${pot.created}</td>
+                            <td><c:choose>
+                                <c:when test="${pot.germinate <= currentDate}">
+                                    <span style="color: green;">${pot.germinate}</span>
+                                </c:when>
+                                <c:otherwise>${pot.germinate}</c:otherwise>
+                            </c:choose>
+                            </td>
+                            <td>
+                                <c:choose>
+                                <c:when test="${pot.plantToGroundDate <= currentDate}">
+                                <span style="color:red;">${pot.plantToGroundDate}
                     </c:when>
                         <c:otherwise>${pot.plantToGroundDate}</c:otherwise>
 
                     </c:choose>
-                <td style="width: 200px">${pot.comment}</td>
-                <td>
-                    <a href="#" onclick="confirmDelete(${pot.id}, '${pot.name}')"><button style='font-size:10px'>Usuń<i class='fas fa-eraser'></i></button></a>
+                            <td style="width: 200px">${pot.comment}</td>
+                            <td>
+                                <a href="#" onclick="confirmDelete(${pot.id}, '${pot.name}')">
+                                    <button style='font-size:10px'>Usuń <i class='fas fa-eraser'></i></button>
+                                </a>
 
-                </td>
+                            </td>
 
-            </tr>
+                        </tr>
 
-        </c:forEach>
-    </table>
-    <div class="nav">
-        <a href="/pot/add"><button style='font-size:10px; width: 60px;'>Dodaj<i class='far fa-edit'></i></button></a>
+                    </c:forEach>
+                </table>
+                <div class="nav">
+                    <a href="/pot/add">
+                        <button style='font-size:10px; width: 60px;'>Dodaj <i class='far fa-edit'></i></button>
+                    </a>
+                </div>
+            </main>
+        </div>
+
+        <%@include file="/WEB-INF/views/menu.jspf" %>
     </div>
-
 </div>
 
 </body>

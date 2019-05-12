@@ -1,44 +1,35 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px; margin-left: 50px; margin-bottom: 50px;" id="mySidebar"><br>
-    <div>
+<aside class="left-sidebar">
+    <a href="/"> <img src="../../plantsmanager-sm.webp"></a>
+    <strong><h7>Plants Manager</h7></strong>
+    <hr>
+    <h5><strong>Menu:</strong></h5>
 
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+       onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i> Close Menu</a>
+    <a href="/seed/list" class="w3-bar-item w3-button w3-padding"><i class="fas fa-tablets" fa-fw></i>
+        Nasiona</a>
+    <a href="/pot/list" class="w3-bar-item w3-button w3-padding"><i class="fas fa-spa"></i> Sadzonki</a>
+    <a href="<c:url value="/logout" />" class="w3-bar-item w3-button w3-padding"><i
+            class="fas fa-user-alt-slash"></i> Logout</a>
+    <hr>
 
-        <div class="w3-col s4">
-
-            <a href="/"> <img src="../../plantsmanager-sm.webp"><br></a>
-        </div>
+    <div id="plants-calendar" class="auto-jsCalendar material-theme green" data-month-format="month YYYY">
     </div>
-    <div style="text-align: center;">
-        <br>
-        <strong>Plants Manager</strong><br>
-<%--        by Marcin Łukaszewski--%>
-        wersja 0.1
 
-    </div>
-    <div class="w3-container">
+</aside><!-- .left-sidebar -->
 
-        <hr>
-        <h5><strong>Menu:</strong></h5>
-    </div>
-    <div class="w3-bar-block">
-        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
-           onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i> Close Menu</a>
-        <a href="/seed/list" class="w3-bar-item w3-button w3-padding"><i class="fas fa-tablets" fa-fw></i>
-            Nasiona</a>
-        <a href="/pot/list" class="w3-bar-item w3-button w3-padding"><i class="fas fa-spa"></i> Sadzonki</a>
-        <a href="<c:url value="/logout" />" class="w3-bar-item w3-button w3-padding"><i
-                class="fas fa-user-alt-slash"></i> Logout</a>
-        <hr>
-<%--        <button id="rozsady">Rozsady</button>--%>
+<aside class="right-sidebar">
+    <div id="show"><h5>Ukryj/Pokaż pogodę</h5></div><hr>
+    <div class="hide" id="weather" style="position: absolute;">
+        <iframe src="https://www.meteoblue.com/en/weather/widget/daily?geoloc=detect&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=monochrome&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&winddirection=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitation=1&precipitationprobability=0&precipitationprobability=1&spot=0&pressure=0&layout=light"
+                frameborder="0" scrolling="NO" allowtransparency="true"
+                sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
+                style="width: 216px;height: 303px"></iframe>
+        <div><!-- DO NOT REMOVE THIS LINK --><a
+                href="https://www.meteoblue.com/en/weather/forecast/week?utm_source=weather_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget"
+                target="_blank">meteoblue</a></div>
+    </div>                    </aside><!-- .right-sidebar -->
 
-        <div id="plants-calendar" class="auto-jsCalendar material-theme green" data-month-format="month YYYY">
-    </div>
-<%--    <button id="my-button-c">Clear</button>--%>
-    </div>
-</nav>
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
-     title="close side menu" id="myOverlay"></div>
 

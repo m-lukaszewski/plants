@@ -14,4 +14,14 @@
 </style>
 
 <script src="../../js/jsCalendar.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#show').click(function() {
+            $('.hide').toggle("slide");
+        });
+    });
+</script>
+
 <link rel="stylesheet" href="/css/main.css">

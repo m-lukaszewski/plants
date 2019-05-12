@@ -16,32 +16,40 @@
 </head>
 <body>
 
-<%@include file="/WEB-INF/views/menu.jspf" %>
+<div class="wrapper">
+    <div class="middle">
 
-<div class="w3-main" style="margin-left:400px;margin-top:20px;margin-right: 80px;">
+        <div class="container">
+            <main class="content">
 
+                <h2">Dodawanie nasion</h2>
+                <form:form method="post" modelAttribute="seed" cssStyle="width: 400px;">
+                    <div> Nazwa
+                        <form:input path="name" class="w3-input"/>
+                        <form:errors style="color:red" path="name"/>
+                    </div>
+                    <div> Dni kiełkowania
+                        <form:input path="growDays" class="w3-input"/>
+                        <form:errors style="color:red" path="growDays"/>
+                    </div>
+                    <div> Dni do rozsady
+                        <form:input path="plantDays" class="w3-input"/>
+                        <form:errors style="color:red" path="plantDays"/>
+                    </div>
+                    <div> Uwagi
+                        <form:input path="comment" class="w3-input"/>
+                        <form:errors style="color:red" path="comment"/>
+                    </div>
 
-    <h2 class="w3-green">Dodawanie nasion</h2>
-    <form:form method="post" modelAttribute="seed">
-        <div> Nazwa
-            <form:input path="name" class="w3-input"/>
-            <form:errors style="color:red" path="name"/>
-        </div>
-        <div> Dni kiełkowania
-            <form:input path="growDays" class="w3-input"/>
-            <form:errors style="color:red" path="growDays"/>
-        </div>
-        <div> Dni do rozsady
-            <form:input path="plantDays" class="w3-input"/>
-            <form:errors style="color:red" path="plantDays"/>
-        </div>
-        <div> Uwagi
-            <form:input path="comment" class="w3-input"/>
-            <form:errors style="color:red" path="comment"/>
+                    <input type="submit" value="dodaj">
+                </form:form></main>
         </div>
 
-        <input type="submit" value="dodaj">
-    </form:form>
+        <%@include file="/WEB-INF/views/menu.jspf" %>
+
+    </div>
 </div>
+
+
 </body>
 </html>

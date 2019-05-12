@@ -15,27 +15,33 @@
     <%@include file="/WEB-INF/views/styles.jspf" %>
 </head>
 <body>
+<div class="wrapper">
+    <div class="middle">
 
-<%@include file="/WEB-INF/views/menu.jspf" %>
+        <div class="container">
+            <main class="content">
 
-<div class="w3-main" style="margin-left:400px;margin-top:20px;margin-right: 80px;">
+                <h2>Sadzenie</h2>
+                <form:form method="post" modelAttribute="pot" cssStyle="width: 400px">
+                    <div> Nazwa
+                        <form:input path="name" class="w3-input"/>
+                        <form:errors style="color:red" path="name"/>
+                    </div>
+                    <div> Nasiona
+                        <form:select path="seed.id" items="${seeds}" itemLabel="name" itemValue="id" class="w3-input"/>
+                        <form:errors style="color:red" path="seed"/>
+                    </div>
+                    <div> uwagi
+                        <form:input path="comment" class="w3-input"/>
+                        <form:errors style="color:red" path="comment"/>
+                    </div>
+                    <input type="submit" value="dodaj">
+                </form:form></main>
+        </div>
 
-    <h2 class="w3-green">Sadzenie</h2>
-    <form:form method="post" modelAttribute="pot">
-        <div> Nazwa
-            <form:input path="name" class="w3-input"/>
-            <form:errors style="color:red"  path="name"/>
-        </div>
-        <div> Nasiona
-            <form:select path="seed.id" items="${seeds}" itemLabel="name" itemValue="id" class="w3-input"/>
-            <form:errors style="color:red"  path="seed"/>
-        </div>
-        <div> uwagi
-            <form:input path="comment" class="w3-input"/>
-            <form:errors style="color:red"  path="comment"/>
-        </div>
-        <input type="submit" value="dodaj">
-    </form:form>
+        <%@include file="/WEB-INF/views/menu.jspf" %>
+
+    </div>
 </div>
 
 </body>
