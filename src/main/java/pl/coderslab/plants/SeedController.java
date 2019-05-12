@@ -63,7 +63,10 @@ public class SeedController {
     }
 
     @PostMapping("/edit/{id}")
-    public String editPost(@ModelAttribute Seed seed, BindingResult result) {
+    public String editPost(@ModelAttribute("seed") @Valid Seed seed, BindingResult result) {
+        if (result.hasErrors()) {
+            return "seedNew";
+        }
         seedRepository.save(seed);
         return "redirect:../list";
     }

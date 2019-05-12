@@ -1,9 +1,11 @@
 package pl.coderslab.plants;
 
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -24,7 +26,6 @@ public class Pot {
     @NotFound(action = NotFoundAction.IGNORE)
     @JoinColumn(name = "seed_id")
     private Seed seed;
-    @UpdateTimestamp
     private LocalDate created;
     private LocalDate germinate;
     private LocalDate plantToGroundDate;

@@ -185,13 +185,13 @@
 		}
 	/* Green */
 		.jsCalendar.green tbody td.jsCalendar-current {
-			background-color: #7FB800;
+			background-color: #4CAF50;
 		}
 		.jsCalendar.green ::-moz-selection {
-			background: #7FB800;
+			background: #4CAF50;
 		}
 		.jsCalendar.green ::selection {
-			background: #7FB800;
+			background: #4CAF50;
 		}
 
 
@@ -265,11 +265,11 @@
 		}
 	/* Green */
 		.jsCalendar.material-theme.green thead {
-			background-color: #7FB800;
+			background-color: #4CAF50;
 		}
 		.jsCalendar.material-theme.green thead .jsCalendar-nav-left:hover,
 		.jsCalendar.material-theme.green thead .jsCalendar-nav-right:hover {
-			background-color: #639000;
+			background-color: #7FB800;
 		}
 
 
@@ -383,9 +383,9 @@
 		}
 	/* Green */
 		.jsCalendar.classic-theme.green thead {
-			background-color: #7FB800;
+			background-color: #4CAF50;
 		}
 		.jsCalendar.classic-theme.green thead .jsCalendar-nav-left:hover,
 		.jsCalendar.classic-theme.green thead .jsCalendar-nav-right:hover {
-			background-color: #639000;
+			background-color: #629000;
 		}

@@ -30,7 +30,7 @@
         <div class="container">
             <main class="content">
 
-                <table class="w3-table-all w3-hoverable" style="width: 600px;";>
+                <table class="w3-table-all w3-hoverable sortable" style="width: 600px;";>
                     <caption><h4><strong>Lista nasion</strong></h4></caption>
                     <thead>
                     <tr class="w3-green">

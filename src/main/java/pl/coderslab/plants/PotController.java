@@ -55,6 +55,7 @@ public class PotController {
         }
 
         Seed seed = seedRepository.getById(pot.getSeed().getId());
+        pot.setCreated(LocalDate.now());
         pot.setGerminate(pot.getCreated().plusDays(seed.getGrowDays()));
         pot.setPlantToGroundDate(pot.getCreated().plusDays(seed.getPlantDays()));
         potRepository.save(pot);
@@ -66,6 +67,25 @@ public class PotController {
         potRepository.deleteById(id);
         return "redirect:../list";
 
+    }
+    @GetMapping("/edit/{id}")
+    public String editGet(@PathVariable Long id, Model model) {
+        Optional<Pot> pot = potRepository.findById(id);
+        model.addAttribute("pot", pot);
+        return "potEdit";
+    }
+
+    @PostMapping("/edit/{id}")
+    public String editPost(@ModelAttribute("pot") @Valid Pot pot, BindingResult result) {
+        if (result.hasErrors()) {
+            return "potEdit";
+        }
+
+        Seed seed = seedRepository.getById(pot.getSeed().getId());
+        pot.setGerminate(pot.getCreated().plusDays(seed.getGrowDays()));
+        pot.setPlantToGroundDate(pot.getCreated().plusDays(seed.getPlantDays()));
+        potRepository.save(pot);
+        return "redirect:../list";
     }
 
     @ModelAttribute("seeds")

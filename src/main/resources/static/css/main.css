@@ -11,11 +11,15 @@ table {
     border-collapse: collapse;
     border-radius: 1em;
     overflow: hidden;
+    opacity: 0.8;
+    box-shadow: #7c7d7e;
 }
 
 th, td {
     padding: 1em;
-    border: 2px solid white;
+    border: rgba(255, 255, 255, 0.1) 2px inset;
+    border-radius: 1em;
+
 }
 
 * {
@@ -143,5 +147,5 @@ body:before {
     left: 0;
     top: 0;
     z-index: -1;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.6);
 }

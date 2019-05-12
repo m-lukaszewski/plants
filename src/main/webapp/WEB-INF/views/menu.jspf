@@ -14,8 +14,9 @@
             class="fas fa-user-alt-slash"></i> Logout</a>
     <hr>
 
-    <div id="plants-calendar" class="auto-jsCalendar material-theme green" data-month-format="month YYYY">
+    <div id="plants-calendar" data-day-format="DD" data-fdotw="2" class="auto-jsCalendar material-theme green" data-month-format="month YYYY">
     </div>
+    
 
 </aside><!-- .left-sidebar -->
 

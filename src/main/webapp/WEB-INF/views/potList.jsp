@@ -73,9 +73,12 @@
 
                     </c:choose>
                             <td style="width: 200px">${pot.comment}</td>
-                            <td>
+                            <td><a href="/pot/edit/${pot.id}">
+                                <button style='font-size:10px; width: 60px;'>Zmień <i class='fas fa-edit'></i>
+                                </button>
+                            </a><br>
                                 <a href="#" onclick="confirmDelete(${pot.id}, '${pot.name}')">
-                                    <button style='font-size:10px'>Usuń <i class='fas fa-eraser'></i></button>
+                                    <button style='font-size:10px; width: 60px;'>Usuń <i class='fas fa-eraser'></i></button>
                                 </a>
 
                             </td>
@@ -96,6 +99,10 @@
                     <a href="/pot/add">
                         <button style='font-size:10px; width: 60px;'>Dodaj <i class='far fa-edit'></i></button>
                     </a>
+                </div>
+                <div><strong>Legenda:</strong>
+                <p style="color: green;">Kiełki powinny być widoczne.</p>
+                <p style="color: red;">Rośliny powinno się przesadzić.</p>
                 </div>
             </main>
         </div>
