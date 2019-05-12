@@ -1,4 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="tg" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: uze
@@ -26,7 +29,9 @@
 
         <div class="container">
             <main class="content">
-                <table class="w3-table-all w3-hoverable" border="1" style="width: 600px;" border="1">
+
+                <table class="w3-table-all w3-hoverable" style="width: 600px;";>
+                    <caption><h4><strong>Lista nasion</strong></h4></caption>
                     <thead>
                     <tr class="w3-green">
                         <th>id</th>
@@ -38,8 +43,7 @@
 
                     </tr>
                     </thead>
-                    <c:forEach items="${seeds}" var="seed">
-
+                    <c:forEach items="${pagedListHolder.pageList}" var="seed">
                         <tr>
 
                             <td>${seed.id}</td>
@@ -63,6 +67,15 @@
 
                     </c:forEach>
                 </table>
+                <jsp:useBean id="pagedListHolder" scope="request"
+                             type="org.springframework.beans.support.PagedListHolder"/>
+                <c:url value="/seed/list" var="pagedLink">
+                    <c:param name="p" value="~"/>
+                </c:url>
+
+                <tg:paging pagedListHolder="${pagedListHolder}"
+                           pagedLink="${pagedLink}"/>
+
                 <div class="nav">
                     <a href="/seed/add" class="nav">
                         <button style='font-size:10px; width: 60px; '>Dodaj <i class='far fa-edit'></i></button>

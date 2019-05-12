@@ -1,11 +1,15 @@
 package pl.coderslab.plants;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.support.PagedListHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
@@ -20,9 +24,13 @@ public class SeedController {
     private SeedRepository seedRepository;
 
     @GetMapping("/list")
-    public String seedList(Model model) {
+    public String seedList(HttpServletRequest request, ModelMap map) {
         List<Seed> seeds = seedRepository.findAll();
-        model.addAttribute("seeds", seeds);
+        PagedListHolder pagedListHolder = new PagedListHolder(seeds);
+        int page = ServletRequestUtils.getIntParameter(request, "p", 0);
+        pagedListHolder.setPage(page);
+        pagedListHolder.setPageSize(10);
+        map.put("pagedListHolder", pagedListHolder);
         return "seedList";
     }
 

@@ -1,12 +1,16 @@
 package pl.coderslab.plants;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.support.PagedListHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.*;
 
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.time.LocalDate;
 import java.util.List;
@@ -23,10 +27,13 @@ public class PotController {
     private SeedRepository seedRepository;
 
     @GetMapping("/list")
-    public String potList(Model model) {
+    public String potList(HttpServletRequest request, ModelMap map, Model model) {
         List<Pot> pots = potRepository.findAll();
-        System.out.println("---------------"+pots.toString());
-        model.addAttribute("pots", pots);
+        PagedListHolder pagedListHolder = new PagedListHolder(pots);
+        int page = ServletRequestUtils.getIntParameter(request, "p", 0);
+        pagedListHolder.setPage(page);
+        pagedListHolder.setPageSize(10);
+        map.put("pagedListHolder", pagedListHolder);
         model.addAttribute("currentDate", LocalDate.now());
         return "potList";
     }

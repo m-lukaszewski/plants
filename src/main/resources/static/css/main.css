@@ -7,7 +7,15 @@
 /*body {*/
 /*    background: #83D8FF;*/
 /*}*/
-
+table {
+    border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
+}
+th, td {
+    padding: 1em;
+    border: 2px solid white;
+}
 * {
     margin: 0;
     padding: 0;
@@ -90,3 +98,24 @@ body {
     height: 50px;
     position: relative;
 }
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 4px;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
