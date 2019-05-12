@@ -28,6 +28,7 @@ Wykorzystane technologie:
     JQuery
     HTML(chyba że nie widać)
     Apache Tomcat
+    MySQL
 
 Kod wykorzystany zgodnie z opdowiednimi licencjami:
     
