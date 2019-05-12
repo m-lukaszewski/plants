@@ -44,6 +44,7 @@
                         <th>zasiane</th>
                         <th>kiełkowanie</th>
                         <th>rozsada</th>
+                        <th>przeznaczenie</th>
                         <th style="width: 200px;">uwagi</th>
                         <th>akcja</th>
 
@@ -72,6 +73,7 @@
                         <c:otherwise>${pot.plantToGroundDate}</c:otherwise>
 
                     </c:choose>
+                            <td>${pot.destination.name}</td>
                             <td style="width: 200px">${pot.comment}</td>
                             <td><a href="/pot/edit/${pot.id}">
                                 <button style='font-size:10px; width: 60px;'>Zmień <i class='fas fa-edit'></i>

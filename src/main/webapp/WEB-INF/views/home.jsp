@@ -41,10 +41,13 @@
                         <li>Paginacja i sortowanie danych widoku</li>
                         <li>Pokazywanie skróconej prognozy pogody *przydatne do planowania rozsady*</li>
                         <li>Logowanie z wykorzystaniem Spring-Security</li>
-
-                        <div style="padding: 15px;"><strong>TODO</strong></div>
+                    </ul>
+                    <div style="padding: 15px;"><strong>TODO</strong></div>
+                    <ul>
                         <li>Integracja z kalendarzem Google + powiadomienia o możliwych rozsadach</li>
-                        <div style="padding: 15px;"><strong>Wykorzystane technologie:</strong></div>
+                    </ul>
+                    <div style="padding: 15px;"><strong>Wykorzystane technologie:</strong></div>
+                    <ul>
                         <li>Java ;-)</li>
                         <li>Spring Boot</li>
                         <li>Java Persistence API</li>
@@ -54,11 +57,16 @@
                         <li>JQuery</li>
                         <li>HTML(chyba że nie widać)</li>
                         <li>Apache Tomcat</li>
-                        <div style="padding: 15px;"><strong>Kod wykorzystany zgodnie z opdowiednimi licencjami:</strong></div>
-                        <li><a href="https://gramthanos.github.io/jsCalendar/">jsCalendar</a> </li>
+                    </ul>
 
-                        <li><a href="https://www.meteoblue.com/en/weather/widget/setupday">Widget z API MeteoBlue</a> </li>
-                        <li><a href="https://www.needpix.com/photo/download/1539102/background-stationary-plants-foliage-greens-branches-vines-hanging-leaves>">Tło autorstwa Circe Denyer (publicdomainpictures.net)</a> </li>
+                    <div style="padding: 15px;"><strong>Kod wykorzystany zgodnie z opdowiednimi licencjami:</strong></div>
+                    <ul>
+                        <li><a href="https://gramthanos.github.io/jsCalendar/">jsCalendar</a></li>
+
+                        <li><a href="https://www.meteoblue.com/en/weather/widget/setupday">Widget z API MeteoBlue</a></li>
+                        <li>
+                            <a href="https://www.needpix.com/photo/download/1539102/background-stationary-plants-foliage-greens-branches-vines-hanging-leaves>">Tło
+                                autorstwa Circe Denyer (publicdomainpictures.net)</a></li>
                     </ul>
                 </h5>
             </main><!-- .content -->

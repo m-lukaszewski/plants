@@ -29,6 +29,11 @@ public class Pot {
     private LocalDate created;
     private LocalDate germinate;
     private LocalDate plantToGroundDate;
+    @ManyToOne
+    @NotNull
+    @NotFound(action = NotFoundAction.IGNORE)
+    @JoinColumn(name = "destination_id")
+    private Destination destination;
     private String comment;
 
     public void setUniqueName() {

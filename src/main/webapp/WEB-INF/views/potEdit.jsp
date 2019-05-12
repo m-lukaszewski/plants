@@ -14,12 +14,12 @@
     <title>Dodawanie doniczek</title>
     <%@include file="/WEB-INF/views/styles.jspf" %>
 
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/>
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script>
-        $(function() {
-            $( ".datepicker" ).datepicker({ dateFormat: 'm/dd/y' });
+        $(function () {
+            $(".datepicker").datepicker({dateFormat: 'm/dd/y'});
         });
     </script>
 </head>
@@ -43,6 +43,11 @@
                     <div> Nasiona
                         <form:select path="seed.id" items="${seeds}" itemLabel="name" itemValue="id" class="w3-input"/>
                         <form:errors style="color:red" path="seed"/>
+                    </div>
+                    <div> Przeznaczenie
+                        <form:select path="destination.id" items="${destinations}" itemLabel="name" itemValue="id"
+                                     class="w3-input"/>
+                        <form:errors style="color:red" path="destination"/>
                     </div>
                     <div> uwagi
                         <form:input path="comment" class="w3-input"/>

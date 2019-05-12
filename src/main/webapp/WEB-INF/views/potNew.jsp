@@ -31,6 +31,10 @@
                         <form:select path="seed.id" items="${seeds}" itemLabel="name" itemValue="id" class="w3-input"/>
                         <form:errors style="color:red" path="seed"/>
                     </div>
+                    <div> Przeznaczenie
+                        <form:select path="destination.id" items="${destinations}" itemLabel="name" itemValue="id" class="w3-input"/>
+                        <form:errors style="color:red" path="destination"/>
+                    </div>
                     <div> uwagi
                         <form:input path="comment" class="w3-input"/>
                         <form:errors style="color:red" path="comment"/>

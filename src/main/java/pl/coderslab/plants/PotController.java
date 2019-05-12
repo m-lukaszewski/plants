@@ -25,6 +25,8 @@ public class PotController {
     private PotRepository potRepository;
     @Autowired
     private SeedRepository seedRepository;
+    @Autowired
+    private DestinationRepository destinationRepository;
 
     @GetMapping("/list")
     public String potList(HttpServletRequest request, ModelMap map, Model model) {
@@ -68,6 +70,7 @@ public class PotController {
         return "redirect:../list";
 
     }
+
     @GetMapping("/edit/{id}")
     public String editGet(@PathVariable Long id, Model model) {
         Optional<Pot> pot = potRepository.findById(id);
@@ -91,6 +94,11 @@ public class PotController {
     @ModelAttribute("seeds")
     public List<Seed> seeds() {
         return this.seedRepository.findAll();
+    }
+
+    @ModelAttribute("destinations")
+    public List<Destination> destinations() {
+        return this.destinationRepository.findAll();
     }
 
 }
