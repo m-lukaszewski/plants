@@ -26,6 +26,7 @@ Wykorzystane technologie:
     Javascript
     JQuery
     HTML(chyba że nie widać)
+    Apache Tomcat
 
 Kod wykorzystany zgodnie z opdowiednimi licencjami:
     
