@@ -10,6 +10,7 @@ Funkcjonalność aplikacji:
     Obliczanie czasu kiełkowania
     Obliczanie czasu do przygotowania rozsady
     Paginacja i sortowanie danych widoku
+    Walidacja danych wprowadzanych z formularzy.
     Pokazywanie skróconej prognozy pogody *przydatne do planowania rozsady*
     Logowanie z wykorzystaniem Spring-Security
 
