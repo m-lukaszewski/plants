@@ -61,6 +61,7 @@
 
     </div>
 </div>
+<%@include file="/WEB-INF/views/footer.jspf" %>
 
 </body>
 </html>

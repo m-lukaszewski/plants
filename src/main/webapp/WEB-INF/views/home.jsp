@@ -16,7 +16,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Plants Manager</title>
     <%@include file="/WEB-INF/views/styles.jspf" %>
 
 </head>
@@ -42,7 +42,7 @@
                         <li>Pokazywanie skróconej prognozy pogody *przydatne do planowania rozsady*</li>
                         <li>Logowanie z wykorzystaniem Spring-Security</li>
                     </ul>
-                    <div style="padding: 15px;"><strong>TODO</strong></div>
+                    <div style="padding: 15px;"><strong>TODO:</strong></div>
                     <ul>
                         <li>Integracja z kalendarzem Google + powiadomienia o możliwych rozsadach</li>
                     </ul>
@@ -57,6 +57,7 @@
                         <li>JQuery</li>
                         <li>HTML(chyba że nie widać)</li>
                         <li>Apache Tomcat</li>
+                        <li>MySQL</li>
                     </ul>
 
                     <div style="padding: 15px;"><strong>Kod wykorzystany zgodnie z opdowiednimi licencjami:</strong></div>
@@ -75,6 +76,6 @@
     </div>
 
 </div>
-
+<%@include file="/WEB-INF/views/footer.jspf" %>
 </body>
 </html>

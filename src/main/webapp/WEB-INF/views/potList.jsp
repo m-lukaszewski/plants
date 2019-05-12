@@ -34,7 +34,7 @@
         <div class="container">
             <main class="content">
 
-                <table class="w3-table-all w3-hoverable"style="width: 600px;">
+                <table class="w3-table-all w3-hoverable sortable"style="width: 600px;">
                     <caption><h4><strong>Lista sadzonek</strong></h4></caption>
                     <thead>
                     <tr class="w3-green">
@@ -44,8 +44,8 @@
                         <th>zasiane</th>
                         <th>kiełkowanie</th>
                         <th>rozsada</th>
-                        <th>przeznaczenie</th>
-                        <th style="width: 200px;">uwagi</th>
+                        <th>cel</th>
+<%--                        <th style="width: 200px;">uwagi</th>--%>
                         <th>akcja</th>
 
                     </tr>
@@ -74,7 +74,7 @@
 
                     </c:choose>
                             <td>${pot.destination.name}</td>
-                            <td style="width: 200px">${pot.comment}</td>
+<%--                            <td style="width: 200px">${pot.comment}</td>--%>
                             <td><a href="/pot/edit/${pot.id}">
                                 <button style='font-size:10px; width: 60px;'>Zmień <i class='fas fa-edit'></i>
                                 </button>
@@ -99,7 +99,8 @@
                            pagedLink="${pagedLink}"/>
                 <div class="nav">
                     <a href="/pot/add">
-                        <button style='font-size:10px; width: 60px;'>Dodaj <i class='far fa-edit'></i></button>
+                        <button style='font-size:10px; width: 60px;'>Dodaj <i class='fas fa-plus'></i>
+                        </button>
                     </a>
                 </div>
                 <div><strong>Legenda:</strong>
@@ -112,6 +113,7 @@
         <%@include file="/WEB-INF/views/menu.jspf" %>
     </div>
 </div>
+<%@include file="/WEB-INF/views/footer.jspf" %>
 
 </body>
 </html>

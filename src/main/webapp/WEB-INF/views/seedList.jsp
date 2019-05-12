@@ -30,7 +30,7 @@
         <div class="container">
             <main class="content">
 
-                <table class="w3-table-all w3-hoverable sortable" style="width: 600px;";>
+                <table class="w3-table-all w3-hoverable sortable" style="width: 600px;" ;>
                     <caption><h4><strong>Lista nasion</strong></h4></caption>
                     <thead>
                     <tr class="w3-green">
@@ -78,7 +78,8 @@
 
                 <div class="nav">
                     <a href="/seed/add" class="nav">
-                        <button style='font-size:10px; width: 60px; '>Dodaj <i class='far fa-edit'></i></button>
+                        <button style='font-size:10px; width: 60px; '>Dodaj <i class='fas fa-plus'></i>
+                        </button>
                     </a>
                 </div>
             </main>
@@ -88,6 +89,7 @@
 
     </div>
 </div>
+<%@include file="/WEB-INF/views/footer.jspf" %>
 
 
 </body>
