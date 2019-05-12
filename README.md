@@ -17,6 +17,7 @@ Funkcjonalność aplikacji:
 TODO:
 
     Integracja z kalendarzem Google + powiadomienia o możliwych rozsadach
+    Rozbudowa encji nasion i sadzonek o dodatkowe funkcjonalności.
 
 Wykorzystane technologie:
 
