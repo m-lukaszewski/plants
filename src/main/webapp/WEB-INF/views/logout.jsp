@@ -13,13 +13,15 @@
     <link href="https://getbootstrap.com/docs/4.0/examples/signin/signin.css" rel="stylesheet" crossorigin="anonymous"/>
 </head>
 <body>
-<div class="container">
+<div class="container" style="text-align: center">
     <form class="form-signin" method="post" action="/logout">
         <h2 class="form-signin-heading">Na pewno chcesz się wylogować?</h2>
         <input name="${_csrf.parameterName}" type="hidden" value="${_csrf.token}" />
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Log Out</button>
-        <button class="btn btn-lg btn-primary btn-block" type="button"><a href="/" style="color: white;">powrót</a> </button>
-    </form>
+        <button class="btn btn-lg btn-primary" type="submit">wyloguj</button>
+        <button class="btn btn-primary btn-lg" type="button"><a href="/" style="color: white;">powrót</a>
+    </button>  </form>
+
+
 </div>
 </body>
 </html>

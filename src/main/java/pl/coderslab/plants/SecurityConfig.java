@@ -39,11 +39,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
+                .withUser("tester").password(passwordEncoder().encode("doniczki")).roles("USER")
+                .and()
                 .withUser("koala").password(passwordEncoder().encode("doniczki")).roles("USER")
                 .and()
-                .withUser("gosia").password(passwordEncoder().encode("Misiulka")).roles("USER")
+                .withUser("Gosia").password(passwordEncoder().encode("Koalka")).roles("USER")
                 .and()
                 .withUser("admin").password(passwordEncoder().encode("Sadownik")).roles("ADMIN");
+
     }
 
 

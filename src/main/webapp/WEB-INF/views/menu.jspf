@@ -3,18 +3,17 @@
 
 <aside class="left-sidebar" style="text-align: center">
     <a href="/"><img style="background-position: center" class="logo" src="../../plantsmanager-sm.webp"></a><br>
-    <strong>
-        <h7>Plants Manager</h7>
-    </strong>
+
+        <h5> <strong>Plants Manager</strong></h5>
+    <h6><br> Miło Cię widzieć <strong>${pageContext.request.userPrincipal.name}</strong>!</h6>
     <hr>
     <h5><strong>Menu:</strong></h5>
 
 
-    <a href="/seed/list" class="w3-bar-item w3-button w3-padding"><i class="fas fa-tablets" fa-fw></i><br>
-        Nasiona</a>
-    <a href="/pot/list" class="w3-bar-item w3-button w3-padding"><i class="fas fa-spa"></i><br> Sadzonki</a>
+    <a href="/seed/list" class="w3-bar-item w3-button w3-padding"><i class="fas fa-tablets" fa-fw></i><br>Nasiona</a>
+    <a href="/pot/list" class="w3-bar-item w3-button w3-padding"><i class="fas fa-spa"></i><br>Sadzonki</a>
     <a href="<c:url value="/logout" />" class="w3-bar-item w3-button w3-padding"><i
-            class="fas fa-user-alt-slash"></i><br> Logout</a>
+            class="fas fa-user-alt-slash"></i><br>Wyloguj</a>
     <hr>
 
     <iframe src="https://www.meteoblue.com/en/weather/widget/daily?geoloc=detect&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&precipunit=MILLIMETER&coloured=monochrome&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&winddirection=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitation=1&precipitationprobability=0&precipitationprobability=1&spot=0&pressure=0&layout=light"
