@@ -44,6 +44,7 @@
                         <th>zasiane</th>
                         <th>kiełkowanie</th>
                         <th>rozsada</th>
+                        <th>przesadzone</th>
                         <th>cel</th>
 <%--                        <th style="width: 200px;">uwagi</th>--%>
                         <th>akcja</th>
@@ -68,11 +69,12 @@
                             <td>
                                 <c:choose>
                                 <c:when test="${pot.plantToGroundDate <= currentDate}">
-                                <span style="color:red;">${pot.plantToGroundDate}
+                                    <span style="color:red;">${pot.plantToGroundDate}</span>
                     </c:when>
                         <c:otherwise>${pot.plantToGroundDate}</c:otherwise>
 
-                    </c:choose>
+                                </c:choose></td>
+                            <td>${pot.isPlantedToGround}</td>
                             <td>${pot.destination.name}</td>
 <%--                            <td style="width: 200px">${pot.comment}</td>--%>
                             <td><a href="/pot/edit/${pot.id}">

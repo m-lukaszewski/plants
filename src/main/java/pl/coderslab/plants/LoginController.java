@@ -25,8 +25,9 @@ public class LoginController {
     public String login(HttpServletRequest request) {
         Logs logs = new Logs();
         logs.setIp(request.getRemoteAddr());
+        logs.setName(request.getRemoteUser());
         logsRepository.save(logs);
-        System.out.println("---------------------"+request.getRemoteAddr());
+        System.out.println("---------------------"+request.getRemoteAddr()+request.getRemoteUser());
         return "login";
     }
 

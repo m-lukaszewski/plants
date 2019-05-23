@@ -5,7 +5,10 @@
     <a href="/"><img style="background-position: center" class="logo" src="../../plantsmanager-sm.webp"></a><br>
 
         <h5> <strong>Plants Manager</strong></h5>
-    <h6><br> Miło Cię widzieć <strong>${pageContext.request.userPrincipal.name}</strong>!</h6>
+    <h6><br> Miło Cię widzieć
+        <strong>
+        ${pageContext.request.remoteUser}</strong>!</h6>
+
     <hr>
     <h5><strong>Menu:</strong></h5>
 
